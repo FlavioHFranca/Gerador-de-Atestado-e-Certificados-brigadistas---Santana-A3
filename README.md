@@ -1,4 +1,6 @@
-# 📜 Santana A3 - Emissor de Atestado & Certificados de Brigada
+<img src="print_sistema.png" alt="Print do sistema" />
+
+# Emissor de Atestado & Certificados de Brigada - Santana A3
 
 Aplicação web desenvolvida com **Streamlit** para automação completa do fluxo de extração de dados e emissão de **Atestados de Brigada de Incêndio** e seus respectivos **Certificados Individuais** em formato PDF.
 
@@ -8,29 +10,29 @@ Aplicação web desenvolvida com **Streamlit** para automação completa do flux
 
 Em processos de regularização e treinamentos de segurança contra incêndio e pânico, a confecção manual de certificados para dezenas de colaboradores a partir de um atestado é uma tarefa repetitiva e propensa a erros de digitação.
 
-Este sistema resolve esse problema através da ingestão automatizada do atestado (em formato **Word (.docx)** ou **PDF**), identificação dos metadados da empresa/filial, leitura dos brigadistas participantes, preenchimento dinâmico de modelo padronizado e conversão instantânea de todos os arquivos para **PDF**, disponibilizando o resultado em um único pacote compactado (`.zip`).
+Este sistema resolve esse problema através da ingestão automatizada do atestado (em formato **Word (.docx)** ou **PDF**), identificação dos metadados da empresa/filial, leitura dos brigadistas participantes, preenchimento dinâmico de modelo padronizado e conversão instantânea de todprint_sistemaos os arquivos para **PDF**, disponibilizando o resultado em um único pacote compactado (`.zip`).
 
 ---
 
 ## ✨ Principais Funcionalidades
 
-- **📂 Upload Híbrido (.docx e .pdf):**
+- **Upload Híbrido (.docx e .pdf):**
   - Leitura nativa de tabelas e textos via `python-docx` para arquivos Word.
   - Extração inteligente de texto e tabelas via `pdfplumber` para arquivos PDF.
-- **🔍 Extração Automática de Metadados:**
+- **Extração Automática de Metadados:**
   - Identificação de Empresa / Filial (com detecção do número da filial).
   - CNPJ da empresa/filial.
   - Data de realização/emissão por extenso.
   - Legislação/Norma Técnica de referência (ex.: CBMPI nº 17/2019, NTs dos Corpos de Bombeiros).
-- **👥 Extração e Conferência de Alunos/Brigadistas:**
+- **Extração e Conferência de Alunos/Brigadistas:**
   - Tabela interativa contendo: Nome completo, CPF, Tipo de Treinamento, Nível (Básico, Intermediário, Avançado) e Carga Horária.
   - Painel de edição prévia na interface web para correções ou ajustes finos antes da geração.
-- **📄 Geração Dinâmica de Certificados:**
+- **Geração Dinâmica de Certificados:**
   - Preenchimento baseado no modelo padrão (`modeloCertificado.docx`) utilizando Jinja2 tags através da biblioteca `docxtpl`.
-- **⚡ Conversão Multiplataforma para PDF:**
+- **Conversão Multiplataforma para PDF:**
   - **Linux / Streamlit Cloud:** Conversão em segundo plano via `libreoffice` headless (configurado no `packages.txt`).
   - **Windows:** Conversão nativa via automação COM do Microsoft Word (`win32com.client`).
-- **📦 Empacotamento em Lote (.zip):**
+- **Empacotamento em Lote (.zip):**
   - Download em 1 clique contendo o Atestado em PDF + todos os Certificados individuais nomeados e padronizados.
 
 ---
@@ -116,10 +118,6 @@ graph TD
 5. O navegador abrirá automaticamente no endereço `http://localhost:8501`.
 
 ---
-
-## ☁️ Deploy no Streamlit Cloud
-
-O projeto já está preparado para deploy no [Streamlit Community Cloud](https://share.streamlit.io/):
 
 ## 👨‍💻 Autor
 
